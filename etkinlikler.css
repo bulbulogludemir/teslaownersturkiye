@@ -21,7 +21,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
   max-width: 1200px;
   justify-content: space-between;
   margin: auto;
@@ -52,7 +52,7 @@ nav {
 }
 
 .logo img {
-  height: 100px;
+  height: 60px;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -151,18 +151,6 @@ nav {
   margin-bottom: 20px;
 }
 
-.event-link {
-  align-self: flex-start;
-  text-decoration: none;
-  color: #e51b26;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.event-link:hover {
-  color: #c4141d;
-}
-
 /* Footer */
 footer {
   background-color: #fff;
@@ -245,8 +233,19 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .nav-links {
     display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .menu-icon {
